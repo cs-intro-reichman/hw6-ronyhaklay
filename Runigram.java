@@ -125,9 +125,7 @@ public class Runigram {
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                Color color = image[i][j];
-                int gray = (color.getRed() + color.getGreen() + color.getBlue()) / 3;
-                grayS[i][j] = new Color(gray, gray, gray);
+                grayS[i][j] = luminance(image[i][j]);
             }
         }
         return grayS;
